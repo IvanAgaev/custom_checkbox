@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form_container">
+            <form class="form" action="https://fom.in.ua/echo">
+                <div class="cards_switch">
+                <input class="log" type= "radio" id="switch" name="registration" value="Вход">
+                <input class="registr" type= "radio" id="switch2" name="registration" value="Регистрация">
+                <label class="label_enter" for="switch">
+                    <span class="font">Вход</span>
+                </label> 
+                <label class="label_registr" for="switch2">
+                <span class="font">Регистрация</span>  
+                </label>
+               
+                </div>
+                <div class="enter_form">
+                    <h1 class="enter">Вход</h1>
+                    <input class="email font" type="email" id="mail" name="mail" placeholder="Введите E-mail">
+                    <input class="password font" type="password" id="password" name="password" placeholder="Введите пароль">
+                </div>
+                <div class="options">
+                    <div class="rememberme">
+                    <input type="checkbox" class="checkbox_rememberme" id="remember" name="rememberme">
+                    <label class="remember" for="remember"><span class="font">Запомнить меня</span></label> 
+                    </div>
+              
+                <div class="forget font">
+                    <a href="#">Забыли пароль?</a>
+                </div> 
+            </div>
+            <input class="submit font" type="submit" name="submit" id="submit" value="Войти">
+            <div class="tip">
+            <span class="font color_green">Ещё нет аккаунта?</span> 
+            <a class="font" href="#">Зарегистрироваться</a>
+            </div>
+            <div class="tosocial">
+                <span class="font color_green">Или войдите через</span> 
+            </div>
+            <div class="social">
+                <ul class="social">
+                    <li><a href="#"><svg class="icon">
+                        <use xlink:href="sprite.svg#facebook"></use>
+                    </svg></a></li>
+                    <li><a href="#">
+                        <svg class="icon">
+                        <use xlink:href="sprite.svg#instagram"></use>
+                    </svg> </a></li>
+                    <li><a href="#">
+                        <svg class="icon">
+                        <use xlink:href="sprite.svg#linkedin"></use>
+                    </svg> </a></li>
+                    
+                </ul>
+            </div>
+
+    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

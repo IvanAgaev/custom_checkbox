@@ -1,0 +1,386 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: Roboto;
+
+
+}
+
+body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(22, 21, 21, 0.5);
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    margin: 0 auto;
+    background: url("../images/back.png") no-repeat center/cover;
+    position: relative;
+    justify-content: flex-end;
+
+}
+
+.wrapper::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(22, 21, 21, 0.5);
+
+}
+
+.form_container {
+    min-width: 496px;
+    backdrop-filter: blur(5px);
+    background: rgba(233, 233, 233, 0.25);
+    height: 100%;
+    overflow: auto;
+    
+
+}
+
+.form {
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.cards_switch {
+    display: inline-block;
+    width: 340px;
+    height: 36px;
+    border: 1px solid #153416;
+    border-radius: 30px;
+    color: white;
+    position: relative;
+    margin: 60px 0 80px 0;
+
+
+
+
+}
+
+.cards_switch .registr+label::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    width: 50%;
+    height: 32px;
+    border-radius: 30px;
+    background: #153416;
+    transition: all .5s linear;
+    z-index: -1;
+}
+
+.cards_switch .registr:checked+label::before {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+}
+
+.label_enter {
+    display: inline-block;
+    width: 50%;
+    height: 36px;
+    cursor: pointer;
+    padding: 11px 70px 11px 73px;
+}
+
+.log,
+.registr {
+    display: none;
+}
+
+.label_registr {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 50%;
+    height: 36px;
+    cursor: pointer;
+    padding: 11px 50px;
+}
+
+.label_enter+span {
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.label_registr+span {
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.enter {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    margin-bottom: 29px;
+}
+
+.enter_form {
+    text-align: center;
+}
+
+.email,
+.password {
+    background: #929191;
+    border-radius: 30px;
+    width: 340px;
+    height: 44px;
+    border: none;
+}
+
+.email {
+    margin-bottom: 15px;
+}
+
+.password {
+    margin-bottom: 21px;
+}
+
+.email::placeholder,
+.password::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    padding: 15px 237px 15px 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.checkbox_rememberme {
+   position: absolute;
+   z-index: -1;
+   opacity: 0;
+}
+ .remember::before{
+    position: absolute; 
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    height: 15px;
+    width: 15px;
+    transition: color .5s ease-in-out;
+    
+}
+.checkbox_rememberme:checked + .remember::before{
+background: url(../Vector3.svg) no-repeat center #153416;
+border: none;
+
+} 
+.remember {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    padding-left: 25px;
+    position: relative;
+    cursor: pointer;
+}
+.rememberme{
+    display: flex;
+    align-items: center;
+}
+.font{
+    font-family: Roboto;
+ font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: #FFFFFF;
+}
+.forget > a{
+text-decoration-line: underline;
+color: #153416;
+
+}
+.submit{
+ background: #153416;
+border-radius: 30px;
+width: 340px;
+height: 44px;
+cursor: pointer;
+margin-bottom: 40px;
+}
+.color_green{
+    color: #153416;
+}
+.tip{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 30px;
+   column-gap: 15px;
+}
+.tosocial{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.social{
+    display: flex; 
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 166px;
+}
+.icon{
+    width: 24px; 
+    height: 24px;
+    fill: #153416;
+}
+.icon:hover{
+    fill: yellow;
+}
